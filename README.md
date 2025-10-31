@@ -2,8 +2,7 @@
 
 ## Nama dan NIM  
 - Elfa Noviana Sari
-- 123140066 
-= PAW RB
+- 123140066 (PAW RB)
 
 ---
 
@@ -28,6 +27,22 @@ Book Library App adalah aplikasi berbasis ReactJS yang memungkinkan pengguna men
 - CSS Grid dan Flexbox untuk layout responsif  
 - Open Library API untuk data buku  
 - LocalStorage untuk penyimpanan reading list  
+   
+---
+
+## Link Deployment
+link : https://uts-pemweb-123140066.vercel.app/
 
 ---
+
+## Screenshot Aplikasi
+Halaman Utama & Form Pencarian
+
+Tabel Hasil Pencarian & Filter
+
+Detail Buku
+Unable to render image
+
+Reading List (Daftar Bacaan)
+
 

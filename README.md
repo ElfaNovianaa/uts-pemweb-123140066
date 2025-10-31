@@ -51,4 +51,22 @@ keterangan : menambah reading list pada buku yang diinginkan dan ada fitur remov
 ![Gambar WhatsApp 2025-10-31 pukul 08 18 30_178bed5e](https://github.com/user-attachments/assets/d619f2e1-5e9c-40f3-a034-4b063aed1de7)
 keterangan : detail ketika deskripsi buku di buka
 
+---
+
+## Cara Nenjalankan Aplikasi
+1. Dengan link github
+   - Unduh seluruh file proyek React ini, termasuk folder src, public, dan file konfigurasi seperti package.json, README.md, dsb dalam ZIP.
+   - Buka terminal di folder proyek.
+   - Jalankan perintah berikut untuk menginstal semua dependensi:
+     ```bash
+     cd nama-folder
+   - Instal semua dependensi
+     ```bash
+     npm install
+   - Jalankan Aplikasi
+     ```bash
+     npm start
+   - Buka di browser
+     ```bash
+     http://localhost:3000
 

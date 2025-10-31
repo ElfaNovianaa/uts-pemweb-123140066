@@ -1,15 +1,14 @@
 # Book Library App
 
 ## Nama dan NIM  
-Elfa Noviana Sari
-123140066 
-PAW RB
+- Elfa Noviana Sari
+- 123140066 
+= PAW RB
 
 ---
 
 ## Deskripsi Singkat
-Book Library App adalah aplikasi berbasis ReactJS yang memungkinkan pengguna mencari, menelusuri, dan mengelola daftar bacaan buku. Aplikasi ini terintegrasi dengan Open Library API sehingga pengguna dapat mencari buku berdasarkan judul, penulis, tahun terbit, atau ISBN. Selain itu, pengguna dapat memfilter buku berdasarkan kategori/subject, melihat detail buku, serta menambah/menghapus buku ke daftar bacaan pribadi yang tersimpan di localStorage.  
-Tampilan aplikasi responsif, modern, dan menggunakan tema warna pink/magenta yang menarik dan mudah digunakan.
+Book Library App adalah aplikasi berbasis ReactJS yang memungkinkan pengguna mencari, menelusuri, dan mengelola daftar bacaan buku. Aplikasi ini terintegrasi dengan Open Library API sehingga pengguna dapat mencari buku berdasarkan judul, penulis, tahun terbit, atau ISBN. Selain itu, pengguna dapat memfilter buku berdasarkan kategori/subject, melihat detail buku, serta menambah/menghapus buku ke daftar bacaan pribadi yang tersimpan di localStorage. Tampilan aplikasi responsif, modern, dan menggunakan tema warna pink/magenta yang menarik dan mudah digunakan.
 
 ---
 

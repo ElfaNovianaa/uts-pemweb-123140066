@@ -31,12 +31,10 @@ export default function App() {
     }
   }, [])
 
-  // Pencarian inisial untuk mengisi data
   useEffect(() => {
     handleSearch({})
   }, [])
 
-  // Save reading list to localStorage
   useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(readingList))
   }, [readingList])
@@ -46,7 +44,7 @@ export default function App() {
     setLoading(true)
     setError("")
     setSelectedBook(null)
-    setFilterSubject("") // Reset filter saat search baru
+    setFilterSubject("") 
     
     if (!isInitialLoad) {
       setBooks([])
@@ -62,25 +60,22 @@ export default function App() {
       if (query.year) params.append("first_publish_year", query.year)
       if (query.isbn) params.append("isbn", query.isbn)
 
-      // Default query jika kosong
       if (params.toString() === "") {
         params.append("q", "harry potter")
       }
       
-      // Limit untuk performa & fields untuk mendapat subject
       params.append("limit", "50")
       params.append("fields", "key,title,author_name,first_publish_year,cover_i,subject")
 
       const url = `https://openlibrary.org/search.json?${params.toString()}`
-      console.log("Fetching:", url) // Debug
+      console.log("Fetching:", url) 
       const res = await fetch(url)
 
       if (!res.ok) throw new Error("Failed to fetch books")
 
       const data = await res.json()
-      console.log("API Response:", data) // Debug
+      console.log("API Response:", data) 
       
-      // Map hasil API ke format yang kita butuhkan
       const mapped = data.docs.map((doc) => ({
         key: doc.key,
         title: doc.title || "Untitled",
@@ -94,31 +89,28 @@ export default function App() {
 
       setBooks(mapped)
 
-      // EKSTRAKSI SUBJEK UNIK untuk dropdown filter
       const allSubjects = mapped
         .flatMap((b) => b.subjects)
-        .filter(s => s && s.trim() !== "") // Remove empty/null
+        .filter(s => s && s.trim() !== "") 
       
-      console.log("All subjects found:", allSubjects.length) // Debug
+      console.log("All subjects found:", allSubjects.length) 
 
       if (allSubjects.length > 0) {
-        // Hitung frekuensi kemunculan setiap subjek
         const subjectCount = allSubjects.reduce((acc, subj) => {
           acc[subj] = (acc[subj] || 0) + 1
           return acc
         }, {})
 
-        // Ambil top 30 subjek paling populer & sort alphabetically
         const topSubjects = Object.entries(subjectCount)
-          .sort((a, b) => b[1] - a[1]) // Sort by frequency (descending)
-          .slice(0, 30) // Limit to top 30
+          .sort((a, b) => b[1] - a[1]) 
+          .slice(0, 30) 
           .map(([subj, count]) => ({ name: subj, count }))
-          .sort((a, b) => a.name.localeCompare(b.name)) // Sort alphabetically
+          .sort((a, b) => a.name.localeCompare(b.name)) 
 
-        console.log("Top subjects:", topSubjects) // Debug
+        console.log("Top subjects:", topSubjects) 
         setSubjects(topSubjects)
       } else {
-        console.warn("No subjects found in API response") // Debug
+        console.warn("No subjects found in API response") 
         setSubjects([])
       }
 
@@ -133,7 +125,6 @@ export default function App() {
     }
   }
 
-  // Fetch book detail
   const handleSelectBook = async (book) => {
     setLoading(true)
     setError("")
@@ -160,7 +151,6 @@ export default function App() {
     setLoading(false)
   }
 
-  // Reading list handlers
   const addToReadingList = (book) => {
     if (!readingList.find((b) => b.key === book.key)) {
       setReadingList([...readingList, book])
@@ -171,12 +161,10 @@ export default function App() {
     setReadingList(readingList.filter((b) => b.key !== key))
   }
 
-  // Filter books berdasarkan subject yang dipilih
   const filteredBooks = filterSubject
     ? books.filter((b) => b.subjects.includes(filterSubject))
     : books
 
-  // Handler untuk reset filter
   const handleResetFilter = () => {
     setFilterSubject("")
   }
@@ -197,7 +185,6 @@ export default function App() {
             <SearchForm onSearch={handleSearch} />
           </section>
 
-          {/* Filter Dropdown - Debug: Tampilkan jumlah subjects */}
           {books.length > 0 && (
             <section className="filter-section">
               <div className="filter-container">
@@ -254,7 +241,6 @@ export default function App() {
             </section>
           )}
 
-          {/* Table Section */}
           <section className="table-section">
             {loading && <p className="loading-message">⏳ Loading...</p>}
             {error && <p className="error-message">❌ {error}</p>}
@@ -272,13 +258,11 @@ export default function App() {
             )}
           </section>
 
-          {/* Book Detail Modal */}
           {selectedBook && (
             <BookDetail book={selectedBook} onClose={() => setSelectedBook(null)} />
           )}
         </section>
 
-        {/* Reading List Sidebar */}
         <aside className="sidebar">
           <ReadingList books={readingList} onRemove={removeFromReadingList} />
         </aside>

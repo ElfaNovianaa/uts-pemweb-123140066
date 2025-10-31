@@ -36,13 +36,19 @@ link : https://uts-pemweb-123140066.vercel.app/
 ---
 
 ## Screenshot Aplikasi
-Halaman Utama & Form Pencarian
+![Gambar WhatsApp 2025-10-31 pukul 08 16 24_3b3a7e80](https://github.com/user-attachments/assets/f93c1955-c50b-45fe-9df0-c20863e6fdff) 
+keterangan : melakukan pencarian buku berdasarkan judul
 
-Tabel Hasil Pencarian & Filter
+![Gambar WhatsApp 2025-10-31 pukul 08 17 42_fbae8797](https://github.com/user-attachments/assets/99798c3f-0b34-423b-84ef-c2204bbda940)
+keterangan : fitur dropdown untuk mencari kategori buku lebih spesifik
 
-Detail Buku
-Unable to render image
+![Gambar WhatsApp 2025-10-31 pukul 08 17 55_bd500ee0](https://github.com/user-attachments/assets/319208a3-a8e6-4362-992d-64f2c575f313)
+keterangan : tampilan setelah mencari buku berdasarkan kategori yang tersedia
 
-Reading List (Daftar Bacaan)
+![Gambar WhatsApp 2025-10-31 pukul 08 18 10_101586eb](https://github.com/user-attachments/assets/eb08c147-f41f-4780-b794-1c2856ddd3e7)
+keterangan : menambah reading list pada buku yang diinginkan dan ada fitur remove buku
+
+![Gambar WhatsApp 2025-10-31 pukul 08 18 30_178bed5e](https://github.com/user-attachments/assets/d619f2e1-5e9c-40f3-a034-4b063aed1de7)
+keterangan : detail ketika deskripsi buku di buka
 
 

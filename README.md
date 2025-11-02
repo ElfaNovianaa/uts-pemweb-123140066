@@ -48,7 +48,7 @@ keterangan : tampilan setelah mencari buku berdasarkan kategori yang tersedia
 ![Gambar WhatsApp 2025-10-31 pukul 08 18 10_101586eb](https://github.com/user-attachments/assets/eb08c147-f41f-4780-b794-1c2856ddd3e7)
 keterangan : menambah reading list pada buku yang diinginkan dan ada fitur remove buku
 
-![Gambar WhatsApp 2025-10-31 pukul 08 18 30_178bed5e](https://github.com/user-attachments/assets/d619f2e1-5e9c-40f3-a034-4b063aed1de7)
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/54a21e1d-4674-4719-b9e8-84e40c65dea2" />
 keterangan : detail ketika deskripsi buku di buka
 
 ---
